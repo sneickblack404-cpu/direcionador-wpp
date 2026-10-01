@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atendimento Carica Pro</title>
+    <script>
+        // Lista com os dois números do WhatsApp para rodízio 50/50
+        const numeros = [
+            "5527992456099", // Atendente 01
+            "5527992564791"  // Atendente 02
+        ];
+
+        // Sorteia aleatoriamente um dos números
+        const numeroAleatorio = numeros[Math.floor(Math.random() * numeros.length)];
+
+        // Mensagem personalizada que o cliente vai enviar já pronta
+        const mensagem = encodeURIComponent("Oii, vim pelo instagram, e queria criar criar uma arte!");
+
+        // Redireciona o usuário instantaneamente para o WhatsApp escolhido
+        window.location.href = `https://wa.me/${numeroAleatorio}?text=${mensagem}`;
+    </script>
+</head>
+<body style="background-color: #111; color: #fff; font-family: sans-serif; text-align: center; padding-top: 50px;">
+    <p>Conectando você ao atendimento exclusivo no WhatsApp...</p>
+</body>
+</html>
